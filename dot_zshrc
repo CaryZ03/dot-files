@@ -17,7 +17,6 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 alias n8nstart='/Users/caryz/.scripts/start-n8n.sh'
 alias proxy='. /Users/caryz/.scripts/proxy.sh'
-alias czpush='chezmoi cd && git add . && git commit -m update && git push'
 alias cz='chezmoi'
 alias copen='open -a Cursor'
 alias wakeonlan='/opt/homebrew/bin/wakeonlan B0:25:AA:4D:71:A0'
@@ -32,3 +31,21 @@ eval "$(jenv init -)"
 # Added by Qoder CLI installer
 export PATH="$PATH:/Users/caryz/.local/bin"
 eval "$(mise activate zsh)"
+
+# proxy switch
+proxy_on () {
+  export HTTP_PROXY=http://100.77.228.65:7890
+  export HTTPS_PROXY=http://100.77.228.65:7890
+  export ALL_PROXY=socks5://100.77.228.65:7892
+}
+
+proxy_off () {
+  unset HTTP_PROXY HTTPS_PROXY ALL_PROXY
+}
+
+czpush() {
+  cd "$(chezmoi source-path)" || return
+  git add .
+  git commit -m "update"
+  git push
+}
