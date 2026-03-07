@@ -1,0 +1,25 @@
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/caryz/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/caryz/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/caryz/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/caryz/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
+alias wakeup="ssh macmini zsh -ic wakeup"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# Added by Qoder CLI installer
+export PATH="$PATH:/Users/caryz/.local/bin"
+eval "$(mise activate zsh)"
