@@ -14,11 +14,12 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+alias reload='source ~/.zshrc'
 alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 alias n8nstart='/Users/caryz/.scripts/start-n8n.sh'
 alias proxy='. /Users/caryz/.scripts/proxy.sh'
 alias cz='chezmoi'
-alias copen='open -a Cursor'
+alias co='open -a Cursor'
 alias wakeonlan='/opt/homebrew/bin/wakeonlan B0:25:AA:4D:71:A0'
 alias wakeup="ssh macmini zsh -ic wakeonlan"
 export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
