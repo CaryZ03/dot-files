@@ -1,4 +1,3 @@
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/caryz/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -16,7 +15,17 @@ unset __conda_setup
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
-alias wakeup="ssh macmini zsh -ic wakeup"
+alias n8nstart='/Users/caryz/.scripts/start-n8n.sh'
+alias proxy='. /Users/caryz/.scripts/proxy.sh'
+alias czpush='chezmoi cd && git add . && git commit -m update && git push'
+alias cz='chezmoi'
+alias copen='open -a Cursor'
+alias wakeonlan='/opt/homebrew/bin/wakeonlan B0:25:AA:4D:71:A0'
+alias wakeup="ssh macmini zsh -ic wakeonlan"
+export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
+export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 

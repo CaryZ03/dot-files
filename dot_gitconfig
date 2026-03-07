@@ -4,7 +4,7 @@
 	required = true
 	clean = git-lfs clean -- %f
 [user]
-	name = Zhang Kairui
+	name = CaryZ
 	email = Zhangkairui250@126.com
 [safe]
 	directory = *

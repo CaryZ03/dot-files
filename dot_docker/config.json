@@ -1,5 +1,17 @@
 {
-	"auths": {},
+	"auths": {
+		"crpi-vy22zn8cndjnrmt3.cn-beijing.personal.cr.aliyuncs.com": {},
+		"https://index.docker.io/v1/access-token": {},
+		"https://index.docker.io/v1/refresh-token": {}
+	},
 	"credsStore": "osxkeychain",
-	"currentContext": "orbstack"
+	"currentContext": "orbstack",
+	"plugins": {
+		"-x-cli-hints": {
+			"enabled": "true"
+		}
+	},
+	"features": {
+		"hooks": "true"
+	}
 }
