@@ -44,11 +44,21 @@ proxy_off () {
   unset HTTP_PROXY HTTPS_PROXY ALL_PROXY
 }
 
+proxy_test () {
+  curl https://www.google.com
+}
+
 czpush() {
   cd "$(chezmoi source-path)" || return
   git add .
   git commit -m "update"
   git push
+}
+
+cozsh() {
+  cursor -nw ~/.zshrc
+  echo "Please save the file and source it"
+  source ~/.zshrc
 }
 
 # >>> mamba initialize >>>
