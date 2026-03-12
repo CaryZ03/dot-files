@@ -73,3 +73,10 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
+
+# edit command line
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^E' edit-command-line
+export EDITOR="cursor -nw"
+export VISUAL="$EDITOR"
