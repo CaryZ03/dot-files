@@ -1,6 +1,7 @@
 [tools]
 chezmoi = "latest"
 codex = "latest"
+node = "latest"
 uv = "latest"
 
 [settings]
