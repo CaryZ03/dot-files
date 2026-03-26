@@ -1,7 +1,9 @@
-[tool.uv.pip]
 index-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 
-[[tool.uv.index]]
+[[index]]
 name = "tsinghua"
 url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 default = true
+
+[pip]
+index-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
