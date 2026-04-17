@@ -12,3 +12,15 @@ Host pet-test
     HostName 47.95.5.139
     Port 22
     User ecs-user
+
+Host robot-container
+    HostName 127.0.0.1
+    Port 39005
+    User zhangkairui
+    ProxyJump robot
+
+Host robot-container2
+    HostName 127.0.0.1
+    Port 39006
+    User zhangkairui
+    ProxyJump robot
