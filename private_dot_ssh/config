@@ -24,3 +24,9 @@ Host robot-container2
     Port 39006
     User zhangkairui
     ProxyJump robot
+
+Host bfm-main
+    HostName 127.0.0.1
+    Port 39007
+    User zhangkairui
+    ProxyJump robot
