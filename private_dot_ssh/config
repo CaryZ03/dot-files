@@ -13,20 +13,11 @@ Host pet-test
     Port 22
     User ecs-user
 
-Host robot-container
+Host robot-workspace
     HostName 127.0.0.1
-    Port 39005
+    Port 39105
     User zhangkairui
     ProxyJump robot
 
-Host robot-container2
-    HostName 127.0.0.1
-    Port 39006
-    User zhangkairui
-    ProxyJump robot
-
-Host bfm-main
-    HostName 127.0.0.1
-    Port 39007
-    User zhangkairui
-    ProxyJump robot
+Host macmini
+    HostName macmini
