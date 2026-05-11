@@ -4,8 +4,8 @@
 Include ~/.orbstack/ssh/config
 
 Host robot
-    HostName 100.85.187.101
-    Port 2222
+    HostName 123.57.136.81
+    Port 39902
     User zhangkairui
 
 Host pet-test
@@ -19,5 +19,23 @@ Host robot-workspace
     User zhangkairui
     ProxyJump robot
 
+Host robot-workspace-copy
+    HostName 127.0.0.1
+    Port 39106
+    User zhangkairui
+    ProxyJump robot
+
 Host macmini
     HostName macmini
+
+Host sjn-r740-bastion
+    HostName frps-bj.vxtrans.com
+    Port 15049
+    User zhangkairui
+    IdentitiesOnly yes
+
+Host sjn-r740-zhangkairui
+    HostName 10.249.85.203
+    User zhangkairui
+    ProxyJump sjn-r740-bastion
+    IdentitiesOnly yes
