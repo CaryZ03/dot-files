@@ -4,9 +4,10 @@
 Include ~/.orbstack/ssh/config
 
 Host robot
-    HostName 123.57.136.81
-    Port 39902
+    HostName ymy-graphics.felis-wyrm.ts.net
+    Port 2222
     User zhangkairui
+    IdentitiesOnly yes
 
 Host pet-test
     HostName 47.95.5.139
@@ -25,8 +26,14 @@ Host robot-workspace-copy
     User zhangkairui
     ProxyJump robot
 
+Host ros2-humble
+    HostName 127.0.0.1
+    Port 39107
+    User zhangkairui
+    ProxyJump robot
+
 Host macmini
-    HostName macmini
+    HostName macmini.tailcdeeb.ts.net
 
 Host sjn-r740-bastion
     HostName frps-bj.vxtrans.com
@@ -37,5 +44,4 @@ Host sjn-r740-bastion
 Host sjn-r740-zhangkairui
     HostName 10.249.85.203
     User zhangkairui
-    ProxyJump sjn-r740-bastion
     IdentitiesOnly yes
