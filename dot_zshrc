@@ -61,6 +61,10 @@ cozsh() {
   source ~/.zshrc
 }
 
+ssh-refresh() {
+  ssh-keygen -R "[127.0.0.1]:$1"
+}
+
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba shell init' !!
 export MAMBA_EXE='/Users/caryz/miniforge3/bin/mamba';
@@ -79,4 +83,4 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey '^E' edit-command-line
 export EDITOR="cursor -nw"
-export VISUAL="$EDITOR"
+export VISUAL="$EDITOR"export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
